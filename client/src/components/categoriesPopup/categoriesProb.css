@@ -1,0 +1,127 @@
+:root {
+    --primary-width: 90%;
+    --max-width: 600px;
+    --input-width: 100%;
+    --border-radius: 10px;
+}
+
+.modal-containers {
+    background-color: #fff;
+    width: var(--primary-width);
+    max-width: var(--max-width);
+    height: 92vh;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.input-fields {
+    display: flex;
+    margin-bottom: 20px;
+    width: var(--input-width);
+    justify-content: center;
+    font-size: clamp(16px, 4vw, 26px);
+}
+
+label {
+    width: var(--input-width);
+    max-width: var(--max-width);
+}
+
+#other-input {
+    width: 100%;
+    margin-left: 0;
+}
+
+.input-type-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 270px;
+}
+
+.categories-btn {
+    padding: 10px 15px;
+    font-size: clamp(14px, 3vw, 16px);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    width: 48%;
+}
+
+.models-img-block {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 0;
+    font-size: clamp(18px, 5vw, 24px);
+}
+
+.confirmation {
+    font-size: clamp(14px, 3vw, 16px);
+    cursor: pointer;
+    color: red;
+    padding: 10px;
+    width: 40%;
+    background-color: white;
+    border: 1px solid red;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .modal-containers {
+        max-width: 100%;
+        height: 49%;
+        padding: 15px;
+    }
+    .modal-containers h2{
+        font-size: 37px;
+    }
+    .input-fields{
+        font-size: 32px;
+    }
+    .input-fields input[type="radio"]{
+        width: 30px;
+    }
+    .input-fields input[type="text"]::placeholder{
+        font-size: 25px;
+    }
+
+    .input-type-btns {
+        align-items: center;
+    }
+
+    .categories-btn, .confirmation {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ensure proper scaling on different devices */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,84 @@
+
+.problam-modal {
+    position: fixed;
+    top: 99px;
+    left: 363px;
+    width: 42vw;
+    height: 63vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-image-block{
+    width: 70%;
+    height: 53%;
+}
+
+.input-connect-btnnn{
+    margin-top: 20px; 
+    width: 350px;
+    font-family: "Gilroy", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.connect-confirmation{
+    text-decoration: none;
+    color: red;
+    width: 48%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 7px 5px;
+    border: 1px solid red;
+}
+
+.connect-confirmation a{
+    text-decoration: none;
+    color: white;
+}
+.people-confirmation{
+    text-decoration: none;
+    color: red;
+    width: 48%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 7px 5px;
+    border: 1px solid red;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.input-field input{
+    padding: 10px 0;
+    font-size: 16px;
+    outline: none;
+    margin-top: 10px;
+}
+.input-field textarea{
+    font-size: 16px;
+    outline: none;
+    margin-top: 10px;
+}
+h2{
+    padding-top: 15px;
+    font-family: "Gilroy", sans-serif;
+}
+
+  @media (max-width: 480px){
+    .model-image-block{
+        width: 139%;
+    }
+    .problam-modal{
+        top: 488px;
+    }
+    
+  }
+  

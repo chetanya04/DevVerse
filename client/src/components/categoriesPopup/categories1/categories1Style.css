@@ -1,0 +1,132 @@
+:root {
+    --modal-width: 90%;
+    --max-modal-width: 500px;
+    --input-width: 100%;
+    --border-radius: 10px;
+}
+
+.expertise-cate-problem {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.expertise-problem-modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expertise-modal-container {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: var(--modal-width);
+    max-width: var(--max-modal-width);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.pop-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: var(--input-width);
+}
+
+.expertise-input-field,
+.expertise-input-explain {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ques {
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: bold;
+    color: #333;
+}
+
+.field-text,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(12px, 3vw, 14px);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.expertise-input-type-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.confirmation-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: clamp(12px, 3vw, 14px);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+}
+
+.confirmation-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .expertise-modal-container {
+        max-width: 95%;
+        padding: 15px;
+        margin: 10px;
+        max-height: 100vh;
+    }
+    .pop-forms{
+        height: 73vh;
+    justify-content: center;
+    margin-left: 49px;
+    }
+
+    .pop-forms label{
+        font-size: 30px;
+    }
+    .pop-forms input[type="text"]{
+        height: 15vh;
+        width: 37rem;
+    }
+    .confirmation-btn{
+        font-size: 21px;
+    }
+}
+
+/* Ensure proper scaling on different devices */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

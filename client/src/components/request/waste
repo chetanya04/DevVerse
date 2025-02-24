@@ -1,0 +1,132 @@
+import React, { useState } from "react";
+import request from './Data';
+import '../request/requestStyle.css';
+import SearchIcon from '../../assets/search-icon.png';
+import RequestPage from "../requestPopup/page";
+import RequestSent from "../requestPopup/requestSent/page"; // Update this import path as needed
+
+const Request = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [selectedProfile, setSelectedProfile] = useState(null);
+  const [showRequestSent, setShowRequestSent] = useState(false);
+  const cardsPerPage = 8;
+  const totalPages = Math.ceil(request.length / cardsPerPage);
+  const displayCards = request.slice(
+    currentPage * cardsPerPage,
+    (currentPage + 1) * cardsPerPage
+  );
+
+  const handleViewClick = (profile) => {
+    setSelectedProfile(profile);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProfile(null);
+  };
+
+  const handleSendRequest = () => {
+    setShowRequestSent(true);
+  };
+
+  const handleCloseRequestSent = () => {
+    setShowRequestSent(false);
+  };
+
+  return (
+    <>
+      <div className="request-container">
+        <div className="request-sub-block">
+          <div className="request-content">
+            <h2>
+              Connect with <span>experts</span>
+            </h2>
+            <p>
+              Join a thriving community where you can connect with industry experts and gain valuable insights. Our expert-led sessions cover a wide range of topics to help you grow and succeed. Whether you're looking to learn, share, or collaborate, this is your space to thrive!
+            </p>
+            <div className="input">
+              <span><img src={SearchIcon} style={{ width: "15px", height: "15px" }} /></span>
+              <input type="text" className="search-expert" placeholder="Search Experts" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="section-class">
+        <div className="card-container-block">
+          <div className="card-containers-sub-block">
+            {displayCards.map((profile) => (
+              <div className="card-blocks" key={profile.id}>
+                <div className="profile-images">
+                  <img
+                    src={profile.profileImage}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    alt={profile.name}
+                  />
+                </div>
+                <div className="profileNames">
+                  <h2>{profile.name}</h2>
+                </div>
+                <div className="profile-titles">
+                  <p>{profile.title}</p>
+                  <p>{profile.description}</p>
+                </div>
+                <div className="social-medias">
+                  <div className="social-media-icons">
+                    <img
+                      src={profile.socialMedia.linkedIn}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }}
+                      alt="LinkedIn"
+                    />
+                  </div>
+                  <div className="social-media-icons">
+                    <img
+                      src={profile.socialMedia.instagram}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      alt="Instagram"
+                    />
+                  </div>
+                  <div className="social-media-icons">
+                    <img
+                      src={profile.socialMedia.facebook}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      alt="Facebook"
+                    />
+                  </div>
+                </div>
+                <div className="input-btns">
+                  <button className="views" onClick={() => handleViewClick(profile)}>View</button>
+                  <button className="sends" onClick={handleSendRequest}>Send Request</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="pagination-controls">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              className={pagination-btn ${currentPage === index ? 'active' : ''}}
+              onClick={() => setCurrentPage(index)}>
+              {index + 1}
+            </button>
+          ))}
+          </div>
+      
+0
+      {selectedProfile && (
+        <div className="request-popup-overlay" onClick={handleCloseModal}>
+          <div className="request-popup-container" onClick={(e) => e.stopPropagation()}>
+            <RequestPage />
+          </div>
+        </div>
+      )}
+
+      {/* Request Sent Modal */}
+      {showRequestSent && <RequestSent onClose={handleCloseRequestSent} />}
+    </>
+  );
+};
+
+export default Request;
+

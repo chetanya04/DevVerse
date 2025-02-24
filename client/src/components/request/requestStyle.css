@@ -1,0 +1,274 @@
+/* General Container Styling */
+.request-container {
+    width: 100%;
+    background-color: #f5fdff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  
+  .request-sub-block {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .request-content {
+    font-family: 'Gilroy', sans-serif;
+    margin: 10px 50px;
+    font-size: 22px;
+  }
+  .section-class{
+      width: 100%;
+      overflow: hidden;
+  }
+  .categories-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .categories-content span {
+    color: #ef353c;
+  }
+  
+  .categories-content p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .search-expert{
+    border: none;
+    width: 64vw;
+    height: 8vh;
+  }
+
+
+  .input {
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    height: 7vh;
+    margin-top: 20px;
+    padding: 8px 10px;
+  }
+  
+  .input-field img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .input-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Card Container Styling */
+  .card-container-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    column-gap: 4%;
+  }
+  
+  .card-containers-sub-block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card-blocks {
+    width: 300px;
+    box-shadow: 0px 8px 24px 0px #00000014;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-images {
+    width: 112px;
+    height: 105px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .profileNames {
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .profile-titles {
+    color: #00000099;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  
+  .social-medias {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .social-media-icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Buttons */
+  .input-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
+  .views {
+    background-color: white;
+    color: #ef353c;
+    border: 1px solid #ef353c;
+    font-family: "Gilroy", sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .sends {
+    background-color: white;
+    color: #ef353c;
+    border: 1px solid #ef353c;
+    font-family: "Gilroy", sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .views,.sends:hover {
+    background-color: #ef353c;
+    color: white;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .pagination-btn {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination-btn.active {
+    background-color: #ef353c;
+    color: white;
+  }
+  
+  .pagination-btn:hover {
+    background-color: #ef353c;
+    color: white;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 800px) {
+    .categories-sub-block {
+      width: 90%;
+    }
+  
+    .categories-content {
+      margin: 10px 20px;
+      font-size: 18px;
+    }
+  
+    .input-field {
+      width: 75%;
+    }
+  
+    .input-field input {
+      padding: 8px;
+    }
+  
+    .card-container-sub-block {
+      gap: 15px;
+    }
+  
+    .card-block {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .request-content h2{
+      font-size: 40px;
+    }
+    .card-blocks{
+      width: 387px;
+    }
+    .expert-details p{
+      font-size: 25px;
+    }
+    .categories-content {
+      font-size: 16px;
+    }
+  
+    .input-field {
+      width: 90%;
+    }
+  
+    .profile-title {
+      font-size: 13px;
+    }
+  
+    .social-media-icon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .pagination-btn {
+      padding: 6px 10px;
+    }
+    .input-btns .sends{
+      font-size: 21px;
+    }
+    .views{
+      font-size: 17px;
+    }
+  }
+  
